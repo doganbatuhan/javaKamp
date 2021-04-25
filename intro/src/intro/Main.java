@@ -1,7 +1,5 @@
 package intro;
 
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Main {
 
@@ -10,14 +8,16 @@ public class Main {
 		// camelCase
 		// Don't repeat yourself
 		String internetSubeButonu = "Ýnternet Þubeye gir";
+		
+		System.out.println(internetSubeButonu);
 
 		double dolarDun = 8.15;
 		double dolarBugun = 8.15;
 		int vade = 36;
-		boolean dustuMu = false;
+		boolean dustuMu = (dolarBugun < dolarDun);
 
-		if (dolarBugun < dolarDun) {
-			System.out.println("Dolar düþtü iconu");
+		if (dustuMu) {
+			System.out.println("Dolar düþtü iconu" + vade);
 		} else if (dolarBugun > dolarDun) {
 			System.out.println("Dolar yükseldi iconu");
 		} else {
