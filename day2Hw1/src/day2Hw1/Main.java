@@ -39,6 +39,7 @@ public class Main {
 		courseManager.add(course2);
 		courseManager.add(course3);
 		courseManager.delete(course1);
+		System.out.println("Proje sonu");
 		
 
 	}
