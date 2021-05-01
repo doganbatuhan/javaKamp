@@ -4,38 +4,29 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Product product1 = new Product(1, "Lenovo V14", 15000, "16 GB Ram");
+		Product product1 = new Product(1, "Lenovo V14", 15000, "16 GB Ram", 10);
 
-		Product product2 = new Product(2, "Lenovo V15", 20000, "32 GB Ram");
-
-		Product product3 = new Product(3, "Hp 5", 10000, "8 GB Ram");
-
-		Product[] products = { product1, product2, product3 };
-
-		for (Product product : products) {
-			System.out.println("Ürün ismi: " + product.name);
-		}
-
-		System.out.println(products.length);
-
+		Product product2 = new Product();
+		product2.setId(2);
+		product2.setName("Lenovo V15");
+		product2.setDetail("32 GB Ram");
+		product2.setDiscount(10);
+		product2.setUnitPrice(16000);
+		
+		System.out.println(product2.getUnitPriceAfterDiscount());
+		
 		Category category1 = new Category();
-		category1.id = 1;
-		category1.name = "Elektronik";
-
+		category1.setId(1);
+		category1.setName("Ýçecek");
+		
 		Category category2 = new Category();
-		category2.id = 2;
-		category2.name = "Ev/Bahçe";
-
-		Category category3 = new Category();
-		category3.id = 3;
-		category3.name = "Moda";
+		category2.setId(2);
+		category2.setName("Yiyecek");
 		
-		ProductManager productManager = new ProductManager();
-		productManager.addToCart(product1);
-		productManager.addToCart(product2);
-		productManager.addToCart(product3);
+		System.out.println(category1.getName());
+		System.out.println(category2.getName());
 		
-
+		
 	}
 
 }
